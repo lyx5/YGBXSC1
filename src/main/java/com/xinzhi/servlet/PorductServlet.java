@@ -32,7 +32,6 @@ public class PorductServlet extends HttpServlet {
 		for (InName Name : list) {
 			String info = list.get(0).getIname();
 			Object put = jo.put("info", info);
-			// fastjson������ת��ΪJSON
 			Object json = JSONObject.toJSON(put);
 			out.print(json);
 		}

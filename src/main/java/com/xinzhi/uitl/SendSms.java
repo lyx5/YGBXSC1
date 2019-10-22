@@ -16,7 +16,18 @@ pom.xml
 </dependency>
 */
 public class SendSms {
+    public static int getSjs() {
+        return sjs;
+    }
+
+    public static void setSjs(int sjs) {
+        SendSms.sjs = sjs;
+    }
+
+    private static int sjs = (int) ((Math.random() * 9 + 1) * 1000);
+
     public static void main(String[] args) {
+
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4FkZ2zbTeCRcfLjkYtJj", "a0iuwt5WXBBwgajNZfsZ2Edv3PhJ6c");
         IAcsClient client = new DefaultAcsClient(profile);
 
@@ -29,7 +40,7 @@ public class SendSms {
         request.putQueryParameter("PhoneNumbers", "18234813623");
         request.putQueryParameter("SignName", "—Ùπ‚±£œ’");
         request.putQueryParameter("TemplateCode", "SMS_175532400");
-        request.putQueryParameter("TemplateParam", "{\"code\":\"1111\"}");
+        request.putQueryParameter("TemplateParam", "{\"code\":" + sjs + "}");
         try {
             CommonResponse response = client.getCommonResponse(request);
             System.out.println(response.getData());
@@ -40,3 +51,4 @@ public class SendSms {
         }
     }
 }
+

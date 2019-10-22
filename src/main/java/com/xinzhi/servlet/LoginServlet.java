@@ -23,23 +23,25 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String uname = request.getParameter("uname");
 		String upwd = request.getParameter("upwd");
+		System.out.println(uname+upwd);
 		if(uname == "" || upwd == ""){
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 		LoginServiceImpl lsi = new LoginServiceImpl();
 		String result = lsi.login(uname, upwd);
 		request.setAttribute("loginResult", result);
-		if(result.equals("��½�ɹ�")){
+		if(result.equals("登陆成功")){
 			request.setAttribute("iphone", uname);
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}else{
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
+
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+    }
 
 }

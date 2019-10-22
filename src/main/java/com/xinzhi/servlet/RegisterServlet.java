@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.xinzhi.service.impl.RegisterServiceImpl;
+import com.xinzhi.uitl.SendSms;
+import sun.security.mscapi.SunMSCAPI;
 
 public class RegisterServlet extends HttpServlet {
 
@@ -17,20 +19,26 @@ public class RegisterServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String uphone = request.getParameter("uphone");
 		String upwd = request.getParameter("upwd");
-		System.out.println(upwd);
+		String yzm = request.getParameter("yzm");
 		RegisterServiceImpl rsi = new RegisterServiceImpl();
 		String page = rsi.register(uphone, upwd);
-		if(page.equals("数据成功添加")){
-			request.setAttribute("iphone", uphone);
-			request.getRequestDispatcher("Index.jsp").forward(request, response);
-		}else{
-			request.getRequestDispatcher("regist.jsp").forward(request, response);
-		}
-		
-		
+        int yz = SendSms.getSjs();
+        System.out.println(yz);
+        if (yzm.equals(yz)) {
+            if (page.equals("数据成功添加")) {
+                request.setAttribute("iphone", uphone);
+                request.getRequestDispatcher("Index.jsp").forward(request, response);
+            } else {
+                request.getRequestDispatcher("regist.jsp").forward(request, response);
+
+            }
+        }
+
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
+
+
 }

@@ -14,14 +14,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<%--<meta http-equiv="expires" content="0">    --%>
 	<%--<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">--%>
 	<%--<meta http-equiv="description" content="This is my page">--%>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/jquery.slideBox.css">
+      <link rel="stylesheet" href="../css/common.css">
+      <link rel="stylesheet" href="../css/index.css">
+      <link rel="stylesheet" href="../css/jquery.slideBox.css">
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-  
+
   <body>
   <div class="wrapper">
       <!--------------------------------------header_user begin------------------------------------->
@@ -29,9 +29,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="main_width">
               <span class="tel">客服电话：400-663-6600（周一至周六 9:00-18:00）</span>
               <span class="fr">
-                <span class="my_insurance"><a href="center/mypolicy（我的保险）.jsp">我的保险<em>1</em></a></span>
-                <span class="Backlog"><a href="book_detail（保单确认）.jsp">未完成订单<em>1</em></a></span>
-                <span class="message"><a href="center/message（消息中心）.jsp">消息<em>1</em></a></span>
+                <span class="my_insurance"><a href="center/mypolicy.jsp">我的保险<em>1</em></a></span>
+                <span class="Backlog"><a href="book_detail.jsp">未完成订单<em>1</em></a></span>
+                <span class="message"><a href="center/message.jsp">消息<em>1</em></a></span>
                 <span class="register"><a href="register.jsp">注册</a></span>
                 <span class="fg"><a href="#">|</a></span>
                 <span><a href="login.jsp">登录</a></span>
@@ -41,11 +41,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="header_nav">
           <div class="main_width">
               <h1><a href="#" class="logo fl">大特保保险官网-互联网保险服务平台</a></h1>
-              <a href="center/mypolicy（我的保险）.jsp" class="my_policy fr">我的保单</a>
+              <a href="center/mypolicy.jsp" class="my_policy fr">我的保单</a>
               <div class="menuBox">
                   <ul class="menu">
                       <li class="active"><a href="index.jsp">首页</a></li>
-                      <li class="special"><a href="list2(分类).jsp">保险产品</a></li>
+                      <li class="special"><a href="list2.jsp">保险产品</a></li>
                       <li><a href="#">理财中心</a></li>
                       <li><a href="#">关于我们</a></li>
                   </ul>
@@ -61,27 +61,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <ul class="menu_main" id="menu_main">
                   <li class="sort sort00" name="sort00">
                       <div class="content">
-                          <a href="list2（分类2）.jsp#titleChildren" target="_blank" class="t a1">关爱孩子<i class="rightIcon">></i></a>
+                          <a href="list2.jsp#titleChildren" target="_blank" class="t a1">关爱孩子<i class="rightIcon">></i></a>
                       </div>
                   </li>
                   <li class="sort sort01" name="sort01">
                       <div class="content">
-                          <a href="list2（分类2）.jsp#titleParents" target="_blank" class="t a2">孝敬父母<i class="rightIcon">></i></a>
+                          <a href="list2.jsp#titleParents" target="_blank" class="t a2">孝敬父母<i class="rightIcon">></i></a>
                       </div>
                   </li>
                   <li class="sort sort02" name="sort02">
                       <div class="content">
-                          <a href="list2（分类2）.jsp#titleSelf" target="_blank" class="t a3">给爱人给自己<i class="rightIcon">></i></a>
+                          <a href="list2.jsp#titleSelf" target="_blank" class="t a3">给爱人给自己<i class="rightIcon">></i></a>
                       </div>
                   </li>
                   <li class="sort sort03" name="sort03">
                       <div class="content">
-                          <a href="YGBX/list2（分类2）.html#titlePlane" target="_blank" class="t a4">航旅专区<i class="rightIcon">></i></a>
+                          <a href="list2.jsp#titlePlane" target="_blank" class="t a4">航旅专区<i class="rightIcon">></i></a>
                       </div>
                   </li>
                   <li class="sort sort04" name="sort04">
                       <div class="content">
-                          <a href="list2（分类2）.jsp#titleTeam" target="_blank" class="t a5">企业团险<i class="rightIcon">></i></a>
+                          <a href="list2.jsp#titleTeam" target="_blank" class="t a5">企业团险<i class="rightIcon">></i></a>
                       </div>
                   </li>
                   <li class="sort sort05" name="sort05">
