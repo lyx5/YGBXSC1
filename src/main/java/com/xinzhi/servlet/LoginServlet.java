@@ -18,19 +18,19 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		//
-		response.setContentType("src/main/text/html;charset=utf-8");
+		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		String uname = request.getParameter("uname");
 		String upwd = request.getParameter("upwd");
-		System.out.println(uname+upwd);
 		if(uname == "" || upwd == ""){
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 		LoginServiceImpl lsi = new LoginServiceImpl();
 		String result = lsi.login(uname, upwd);
 		request.setAttribute("loginResult", result);
-		if(result.equals("登陆成功")){
+
+		if(result.equals("登录成功")){
 			request.setAttribute("iphone", uname);
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}else{

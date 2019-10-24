@@ -15,9 +15,9 @@ public class LoginServiceImpl implements ILoginService {
 
 		if(login != null){
 			System.out.println(login.getUid());
-			return "µÇÂ½³É¹¦";
+			return "ç™»å½•æˆåŠŸ";
 		}else{
-			return "µÇÂ¼Ê§°Ü";
+			return "ç™»å½•å¤±è´¥";
 		}
 	}
 

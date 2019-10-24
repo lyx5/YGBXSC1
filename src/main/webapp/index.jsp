@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@ taglib  prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -14,9 +14,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<%--<meta http-equiv="expires" content="0">    --%>
 	<%--<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">--%>
 	<%--<meta http-equiv="description" content="This is my page">--%>
-      <link rel="stylesheet" href="../css/common.css">
-      <link rel="stylesheet" href="../css/index.css">
-      <link rel="stylesheet" href="../css/jquery.slideBox.css">
+      <link rel="stylesheet" href="css/common.css">
+      <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/jquery.slideBox.css">
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                   </li>
                   <li class="sort sort05" name="sort05">
                       <div class="content">
-                          <a href="#" class="t a6">一元购<i class="rightIcon">></i></a>
+                          <a href="#" class="t a6">一元购<i class="rightIcon"></i></a>
                       </div>
                   </li>
               </ul>

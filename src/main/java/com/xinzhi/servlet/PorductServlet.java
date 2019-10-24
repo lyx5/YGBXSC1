@@ -1,18 +1,17 @@
 package com.xinzhi.servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
+import com.alibaba.fastjson.JSONObject;
+import com.xinzhi.pojo.InName;
+import com.xinzhi.service.impl.InsuranceProductsServiceImpl;
+import com.xinzhi.uitl.PolicyPage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.alibaba.fastjson.JSONObject;
-import com.xinzhi.pojo.InName;
-import com.xinzhi.service.impl.InsuranceProductsServiceImpl;
-import com.xinzhi.uitl.PolicyPage;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 public class PorductServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)

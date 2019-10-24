@@ -64,7 +64,7 @@
                             <a href="#" class="forgetPwd">忘记密码？</a>
                         </div>
                         <div>
-                            <input type="button" class="login_btn" id="loginBtn" value="登录">
+                            <input type="submit" class="login_btn" id="loginBtn" value="登录">
                         </div>
                     </form>
                 </div>

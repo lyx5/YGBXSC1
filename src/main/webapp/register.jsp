@@ -5,8 +5,7 @@
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <!DOCTYPE html>
-    <html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <title>注册页面</title>
@@ -177,4 +176,4 @@
         //    end
     </script>
     </body>
-    </html>
+</html>

@@ -23,17 +23,18 @@ public class VerifyCodeServlet extends HttpServlet {
 	    @Override
 	    protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		    throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		String uri = request.getRequestURI();
-		System.out.println("hello : " + uri);
-		final int width = 180;
-		final int height = 40;
-		final String imgType = "jpeg"; 
-		final OutputStream output = response.getOutputStream(); 
-		String code = GraphicHelper.create(width, height, imgType, output);
-		System.out.println("ÑéÖ¤ÂëÄÚÈÝ: " + code);
-		session.setAttribute(uri, code);
-		System.out.println(session.getAttribute(uri));
-		
+			response.setContentType("text/html;charset=utf-8");
+			request.setCharacterEncoding("UTF-8");
+			HttpSession session = request.getSession();
+			String uri = request.getRequestURI();
+			System.out.println("hello : " + uri);
+			final int width = 180;
+			final int height = 40;
+			final String imgType = "jpeg";
+			final OutputStream output = response.getOutputStream();
+			String code = GraphicHelper.create(width, height, imgType, output);
+			System.out.println("ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + code);
+			session.setAttribute(uri, code);
+			System.out.println(session.getAttribute(uri));
 	    }
 }
